@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Engagement&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <title>Página Protegida</title>
+  <style>
+    body { 
+      font-family: Arial, sans-serif; 
+      text-align: center; 
+      padding: 100px; 
+      background-color: #FFB7C2;
+    }
+
+    input, button { 
+      font-size: 16px; 
+      margin: 5px; }
+  
+    header {
+      border-style: solid;
+      border-radius: 30px;
+      margin: 0 auto;
+      padding: 20px;
+      width: 420px;
+      color: #FFFFFF;
+      background: #FFFFFF;
+    }
+
+    h1 {
+      color: #D92864;
+      font-size: 60px;
+      font-family: "Engagement", cursive;
+      font-weight: 400;
+      font-style: normal;
+      margin: 0 auto;
+    }
+
+    button {
+        border: 2px solid white;
+      color: #FFFFFF;
+      background: #D92864;
+      cursor: pointer;
+      width: 150px;   
+      height: 50px;
+      border-radius: 20px;
+      border-color: #FFFFFF;
+    }
+
+    #senha {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #FFB7C3;
+  color: #D92864;
+  -webkit-text-fill-color: #D92864;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  width: 350px;   
+  height: 60px;
+}
+
+#senha:focus {
+  border: 1px solid #FFB7C3;   /* impede a borda preta */
+  outline: none;            /* remove o contorno azul/preto */
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+  <h1>Enter the secret code</h1>
+  <input type="password" id="senha" placeholder="Our special word...">
+  <button onclick="verificarSenha()">Enter</button>
+</header>
+
+  <script>
+    function verificarSenha() {
+      const senha = document.getElementById("senha").value;
+      // A senha correta é "bárbara"
+      if (senha === "Bárbara") {
+        // Redireciona para outra página HTML
+        window.location.href = "pagina-secreta.html"; 
+      } else {
+        alert("Senha incorreta!");
+      }
+    }
+  </script>
+
+</body>
+</html>
